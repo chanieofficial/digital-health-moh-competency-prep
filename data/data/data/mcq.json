@@ -1,0 +1,213 @@
+[
+ {
+  "unit": "Strategy & Strategic Planning (Technical)",
+  "q": "A Lead Executive Officer is aligning the Health Extension Program (HEP) strategic plan with the Health Sector Transformation Plan (HSTP II). Which strategic approach best ensures long-term operational sustainability of high-value health center assets and community post infrastructure?",
+  "options": [
+   "Developing integrated frameworks that explicitly align institutional goals with local service delivery metrics.",
+   "Issuing periodic operational directives instructing Health Extension Workers to increase facility utilization.",
+   "Procuring updated diagnostic equipment whenever existing health post infrastructure shows operational wear.",
+   "Rebranding health posts to reflect modern community care terminology to enhance public perception."
+  ],
+  "answer": 0,
+  "slide": 15
+ },
+ {
+  "unit": "Planning (Technical)",
+  "q": "When translating national Primary Health Care policies/strategies into agrarian Woreda operational plans, which approach best addresses equity gaps in remote kebele health service coverage?",
+  "options": [
+   "Enforcing uniform health post opening hours across all kebeles regardless of pastoral or agrarian movement.",
+   "Increasing the frequency of standard reporting templates sent from health posts to the Woreda health office.",
+   "Reallocating all preventive health budgets toward tertiary hospital referrals for critically ill rural patients.",
+   "Adapting service packages through contextualized micro-planning based on local epidemiological profiles."
+  ],
+  "answer": 3,
+  "slide": 21
+ },
+ {
+  "unit": "Strategic Thinking",
+  "q": "During budget planning, an officer notices that short-term projects provide quick results but may not support long-term government priorities. How should the officer apply strategic thinking?",
+  "options": [
+   "Allocate resources to short-term projects to achieve immediate outputs",
+   "Focus only on long-term projects and disregard urgent short-term requirements",
+   "Follow previous budgets strictly without reviewing evolving priorities and needs",
+   "Balance short-term needs with long-term goals and prioritize initiatives with sustainable impact"
+  ],
+  "answer": 3,
+  "slide": 41
+ },
+ {
+  "unit": "Innovation",
+  "q": "An office relies on a slow, paper-based process to handle routine client requests, resulting in long delays. A junior staff member proposes a simple digital tracking system using existing office computers, but some colleagues resist because \"this is not how things have always been done.\" Which response best reflects strong innovation competency?",
+  "options": [
+   "Abandon the idea to avoid conflict with colleagues",
+   "Pilot the new system on a small scale and refine it",
+   "Implement the system for everyone immediately without testing",
+   "Report resistant colleagues to management"
+  ],
+  "answer": 1,
+  "slide": 43
+ },
+ {
+  "unit": "Market Development",
+  "q": "A government agency responsible for supporting small enterprises notices that local producers in a particular sector lack access to information about how to meet quality standards required to enter a larger market. What action best demonstrates this competency?",
+  "options": [
+   "Leave the matter to the private sector to resolve on its own",
+   "Identify the specific gaps producers face and provide targeted guidance",
+   "Set requirements for producers without consulting them",
+   "Wait until producers formally request help before taking any action"
+  ],
+  "answer": 1,
+  "slide": 46
+ },
+ {
+  "unit": "Stakeholder Leadership",
+  "q": "A government officer is planning a program to improve local business participation in public procurement. Multiple stakeholders including small businesses, community groups and regulatory agencies have conflicting priorities. Which action best demonstrates stakeholder leadership?",
+  "options": [
+   "Map stakeholders, foster dialogue, and build consensus.",
+   "Prioritize only the needs of large businesses to ensure project efficiency",
+   "Implement decisions without consulting stakeholders to avoid delays",
+   "Focus exclusively on regulatory compliance without engaging communities"
+  ],
+  "answer": 0,
+  "slide": 49
+ },
+ {
+  "unit": "Communication & Influencing",
+  "q": "Which statement best reflects the combined essence of communication and influencing?",
+  "options": [
+   "Communicating clearly and ethically to guide decisions toward shared outcomes",
+   "Delivering persuasive messages while giving limited attention to stakeholder views",
+   "Sharing accurate information through established organizational channels",
+   "Persuading others primarily by highlighting personal expertise and authority"
+  ],
+  "answer": 0,
+  "slide": 51
+ },
+ {
+  "unit": "Teamwork",
+  "q": "Which behavior most accurately reflects effective teamwork within a public service organization?",
+  "options": [
+   "Sharing relevant information and resources to achieve shared objectives",
+   "Emphasizing individual achievements over collective team results",
+   "Restricting collaboration to staff within the same organizational unit",
+   "Avoiding disagreement by disregarding differing opinions within the team"
+  ],
+  "answer": 0,
+  "slide": 53
+ },
+ {
+  "unit": "Emotional Intelligence",
+  "q": "A civil servant responsible for issuing permits encounters an angry citizen who claims their application was unfairly delayed and accuses the office of bias. Which response best demonstrates emotional intelligence?",
+  "options": [
+   "Remain calm, acknowledge concerns, and explain procedures objectively",
+   "Restate the rules firmly and end the interaction quickly",
+   "Transfer the interaction to a colleague to avoid involvement",
+   "Ignore emotional cues and complete the transaction efficiently"
+  ],
+  "answer": 0,
+  "slide": 56
+ },
+ {
+  "unit": "Ethics & Role Modeling",
+  "q": "A procurement officer is overseeing a tender evaluation. A close acquaintance who owns one of the bidding companies asks informally for information about competitors' bids. Which action best demonstrates ethics and role modeling?",
+  "options": [
+   "Refuse the request, disclose the relationship, and follow proper procedures",
+   "Provide limited information without revealing competitor details to assist the acquaintance",
+   "Delay responding to the acquaintance until the evaluation process is complete",
+   "Share some non-confidential information to maintain the personal relationship"
+  ],
+  "answer": 0,
+  "slide": 59
+ },
+ {
+  "unit": "Diversity & Inclusion",
+  "q": "A committee is selecting participants for a professional-development program. Most applicants have similar qualifications, but candidates from remote areas and candidates with disabilities have had fewer opportunities to access training. Which approach is most consistent with fair and inclusive public administration?",
+  "options": [
+   "Select according to previous training and current performance because identical criteria guarantee fairness.",
+   "Reserve a fixed number of places for underrepresented groups regardless of their qualifications.",
+   "Apply job-relevant criteria while considering unequal access to prior opportunities and providing reasonable accommodation.",
+   "Select the applicants who are most likely to complete the training quickly and produce immediate institutional benefits."
+  ],
+  "answer": 2,
+  "slide": 62
+ },
+ {
+  "unit": "Diversity & Inclusion",
+  "q": "A public service project team includes members from different cultural and professional backgrounds. During meetings, some members rarely speak up, and their perspectives are often overlooked. As the team leader, which action best demonstrates diversity and inclusion?",
+  "options": [
+   "Encourage all members to share ideas and acknowledge perspectives",
+   "Focus discussions on the most vocal members to save time consistently",
+   "Assign tasks primarily based on seniority to minimize potential conflict",
+   "Limit participation only to members with direct technical expertise"
+  ],
+  "answer": 0,
+  "slide": 63
+ },
+ {
+  "unit": "Competence & Motivation",
+  "q": "Your unit has met its annual targets, but staff motivation is declining because employees believe that their work is repetitive and has little connection to public outcomes. As the supervisor, what should you do first?",
+  "options": [
+   "Introduce financial or non-financial rewards for employees who exceed their targets.",
+   "Explain how each role contributes to institutional priorities and involve staff",
+   "Increase monitoring and reporting requirements to ensure that employees remain focused on their responsibilities.",
+   "Rotate staff among different tasks so that everyone experiences greater variety."
+  ],
+  "answer": 1,
+  "slide": 65
+ },
+ {
+  "unit": "Servanthood",
+  "q": "A citizen approaches your office with a complaint that falls partly outside your unit's formal mandate. The issue is urgent, but assisting the citizen will require coordination with another institution. What best demonstrates public-service servanthood?",
+  "options": [
+   "Explain that the issue is outside your mandate and provide the other institution's contact details.",
+   "Clarify the citizen's need, explain the limits of your authority, and facilitate a referral",
+   "Resolve the issue yourself, even if doing so requires bypassing established procedures.",
+   "Ask the citizen to submit a formal written complaint before providing any assistance."
+  ],
+  "answer": 1,
+  "slide": 67
+ },
+ {
+  "unit": "Time Management",
+  "q": "A manager schedules eight consecutive meetings from 8:00 a.m. to 4:00 p.m. without breaks. After each meeting, the manager must send decisions and assign follow-up actions. What adjustment is most useful?",
+  "options": [
+   "Combine all meetings into one longer meeting",
+   "Leave time between meetings for follow-up work",
+   "Ask participants to shorten their contributions",
+   "Schedule follow-up activities for the following week"
+  ],
+  "answer": 1,
+  "slide": 69
+ },
+ {
+  "unit": "Value-Adding Work",
+  "q": "In a resource-constrained public agency, you are tasked with improving service delivery. Which approach best demonstrates value-adding work?",
+  "options": [
+   "Prioritizing activities that align with citizen needs",
+   "Focusing on completing all assigned tasks within the stipulated time",
+   "Adopting innovative tools to modernize service delivery processes",
+   "Delegating responsibilities to junior staff to enhance their experience"
+  ],
+  "answer": 0,
+  "slide": 71
+ },
+ {
+  "unit": "Discharging Responsibility",
+  "q": "A specialized medical equipment deployment project managed by your desk misses its implementation deadline by six months due to poor contractor performance and weak tracking. How do you exercise professional accountability?",
+  "options": [
+   "Initiate legal contract termination procedures against the defaulting vendor.",
+   "Present a complete failure analysis and revised milestone recovery plan to leadership.",
+   "Reallocate remaining project budgets to high-performing regional sites.",
+   "Request an independent audit to establish contractual liability."
+  ],
+  "answer": 1,
+  "slide": 73
+ },
+ {
+  "unit": "Leadership",
+  "q": "You are leading a shift toward decentralized hospital budget autonomy. Regional health directors resist, fearing full financial liability and administrative overburden. How do you lead this strategic transition?",
+  "options": [
+   "Mandate immediate compliance as required by national civil service reform laws.",
+   "Implement phased autonomy paired with technical financial management coaching",
+   "Pause the decentralization process until regional directors request transition.",
+   "Maintain central financial approval while delegating routine operational
