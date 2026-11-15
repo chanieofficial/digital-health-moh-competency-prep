@@ -1,4 +1,3 @@
-streamlit>=1.40
 import json, random, pathlib
 import streamlit as st
 from content import *
