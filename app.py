@@ -28,14 +28,7 @@ st.markdown("""
 #MainMenu,footer{visibility:hidden}
 </style>""", unsafe_allow_html=True)
 
-raw_mcq = (pathlib.Path(__file__).parent / "data" / "mcq.json").read_text(encoding="utf-8").strip()
-dec, idx, MCQ = json.JSONDecoder(), 0, []
-while idx < len(raw_mcq):
-    chunk, idx = dec.raw_decode(raw_mcq, idx)
-    MCQ.extend(chunk if isinstance(chunk, list) else [chunk])
-    while idx < len(raw_mcq) and raw_mcq[idx] in " \r\n\t,":
-        idx += 1
-
+MCQ = json.loads((pathlib.Path(__file__).parent / "data" / "mcq.json").read_text(encoding="utf-8"))
 UNIT_TO_CAT = {u[1]: u[0] for u in UNITS}
 
 # Bilingual Helper
