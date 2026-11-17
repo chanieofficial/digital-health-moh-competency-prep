@@ -214,5 +214,126 @@
   ],
   "answer": 1,
   "slide": 76
- }
+ },
+ 
+  {
+    "unit": "Building Markets / Resource Mobilization",
+    "q": "Your public health center's maternal waiting home needs basic bedding and nutrition supplies, but the quarterly government budget is already fully allocated. Which approach best reflects responsible resource mobilization?",
+    "options": [
+      "Collaborate with the facility management committee to map local community organizations, NGOs, and municipal partners through transparent, documented in-kind support requests.",
+      "Ask patients' families to pay an informal cash fee at the gate to cover supply costs.",
+      "Close the maternal waiting home until the next fiscal year budget arrives.",
+      "Divert emergency obstetric medications to trade for food supplies."
+    ],
+    "answer": 0,
+    "rationale": "Ethical resource mobilization leverages community and institutional partnerships transparently without imposing unauthorized fees on citizens."
+  },
+  {
+    "unit": "Growth Mindset",
+    "q": "Your hospital transitions from paper registers to an Electronic Medical Record (EMR) system, and several colleagues complain that the new workflow slows them down. What demonstrates a strong growth mindset?",
+    "options": [
+      "Attend the hands-on training sessions, practice entering records accurately, and help peers troubleshoot common data-entry steps.",
+      "Continue using only paper notebooks and leave the digital entry to the data clerk at the end of the month.",
+      "Criticize the IT team publicly during morning rounds for introducing a difficult system.",
+      "Avoid logging into the EMR unless a supervisor is watching."
+    ],
+    "answer": 0,
+    "rationale": "A growth mindset embraces digital health reforms as an opportunity to build new skills and support team adaptation."
+  },
+  {
+    "unit": "Empowerment & Emotional Intelligence",
+    "q": "During a crowded night shift, an anxious parent loudly accuses your clinical team of ignoring their sick child while you are stabilizing another critical emergency. How should you respond first?",
+    "options": [
+      "Keep your voice calm, acknowledge the parent's fear empathetically, briefly explain the triage priority, and give a clear update on when their child will be seen.",
+      "Raise your voice to remind the parent that hospital rules prohibit shouting at staff.",
+      "Walk away without speaking so you do not get drawn into an argument.",
+      "Tell the parent to take their child to a private clinic if they cannot wait."
+    ],
+    "answer": 0,
+    "rationale": "Emotional intelligence combines self-regulation under stress with empathetic communication that de-escalates citizen anxiety."
+  },
+  {
+    "unit": "Time Management",
+    "q": "At the start of your morning shift, you have four pending tasks: (1) an acutely deteriorating patient needing immediate assessment, (2) a monthly DHIS2 report due at 4:00 PM, (3) routine supply restocking, and (4) organizing staff leave schedules. How should you sequence your work?",
+    "options": [
+      "Stabilize the acute patient first, delegate or schedule routine restocking mid-morning, complete the DHIS2 report well before the 4:00 PM deadline, and finalize leave schedules last.",
+      "Finish the leave schedules and DHIS2 report first so paperwork is out of the way before seeing patients.",
+      "Handle tasks in whichever order people ask for them throughout the day.",
+      "Wait until 3:45 PM to start compiling the monthly DHIS2 report."
+    ],
+    "answer": 0,
+    "rationale": "Effective civil service time management prioritizes life-safety clinical urgency first, followed by hard institutional reporting deadlines."
+  },
+  {
+    "unit": "Leadership",
+    "q": "As a clinical unit team leader, you notice that infection-prevention compliance has dropped during weekend shifts due to unclear task assignments. What is the most effective leadership action?",
+    "options": [
+      "Hold a constructive review with the weekend team, clarify roles using a visible checklist, ensure supplies are stocked before Friday afternoon, and model compliance yourself.",
+      "Issue formal warning letters to all weekend staff without discussing the root causes.",
+      "Ignore the weekend gap as long as weekday inspection scores remain high.",
+      "Perform all infection-prevention tasks yourself during weekends."
+    ],
+    "answer": 0,
+    "rationale": "Transformational public-sector leadership removes operational bottlenecks, clarifies accountability, and leads by example."
+  },
+  {
+    "unit": "Empowerment & Emotional Intelligence",
+    "q": "A newly graduated clinician assigned to your unit hesitates to perform routine procedures independently despite having passed licensure exams. How can you best empower them?",
+    "options": [
+      "Pair them with an experienced mentor for structured observation, provide constructive feedback after each case, and gradually increase their independent responsibilities.",
+      "Take over all their clinical tasks so patients are not delayed.",
+      "Assign them complex emergency cases immediately without supervision so they learn under pressure.",
+      "Reassign them permanently to clerical filing duties."
+    ],
+    "answer": 0,
+    "rationale": "Empowerment builds long-term institutional capacity through structured coaching, safe delegation, and confidence-building feedback."
+  },
+  {
+    "unit": "Accountability",
+    "q": "Under Federal Civil Servants Proclamation No. 1353/2025, a supervisor instructs you verbally to backdate a training attendance sheet so an absent colleague can receive a per-diem allowance. What is your legal and ethical obligation?",
+    "options": [
+      "Politely refuse to falsify the official record, explain that attendance logs must reflect actual presence, and report the matter through proper ethical channels if pressured.",
+      "Sign the backdated sheet because civil servants must always obey verbal orders from a supervisor.",
+      "Sign the sheet but add a small pencil mark next to the absent colleague's name.",
+      "Ask a junior clerk to sign the form on your behalf."
+    ],
+    "answer": 0,
+    "rationale": "Proclamation No. 1353/2025 requires civil servants to uphold legality and integrity; an unlawful instruction to falsify public financial records must not be executed."
+  },
+  {
+    "unit": "Ethics & Integrity",
+    "q": "A medical supply vendor offers you a personal smartphone as a 'thank-you gift' after your department submits a positive technical evaluation of their equipment. What must you do?",
+    "options": [
+      "Decline the gift immediately, document the interaction, and notify your facility's ethics and anti-corruption officer.",
+      "Accept the phone quietly as long as it does not change your future evaluations.",
+      "Accept the phone and share it with other members of the evaluation committee.",
+      "Ask the vendor to donate the phone directly to your personal home address instead."
+    ],
+    "answer": 0,
+    "rationale": "Accepting gifts from suppliers creates a direct conflict of interest and violates civil service anti-corruption regulations."
+  },
+  {
+    "unit": "Health Information Systems (DHIS2/HMIS)",
+    "q": "When auditing your facility's monthly HMIS report, you find that Accuracy is 98%, Completeness is 96%, Validity is 95%, but Timeliness is only 60% because reports are submitted two weeks late. What is the Data Quality Index (DQI) and operational implication?",
+    "options": [
+      "The DQI is 87.25%, falling below the 95% target; delayed submission prevents woreda and regional teams from responding promptly to disease trends.",
+      "The DQI is 96.3%, which meets the 95% target because accuracy and completeness are high.",
+      "Timeliness does not affect data quality as long as the numbers are eventually entered.",
+      "The facility should estimate missing numbers early to hit 100% timeliness."
+    ],
+    "answer": 0,
+    "rationale": "DQI averages all four dimensions ((98 + 96 + 95 + 60) / 4 = 87.25%); late data undermines timely public health decision-making."
+  },
+  {
+    "unit": "Digital Health & ICT Security",
+    "q": "You share a desktop workstation at the nursing station to access patient EMR records and DHIS2. Which practice best protects patient confidentiality and system security?",
+    "options": [
+      "Use your own unique login credentials and lock or log out of the workstation every time you step away.",
+      "Keep one shared password taped under the keyboard so any nurse on shift can log in quickly.",
+      "Stay logged into your account all day so the next shift does not have to waste time signing in.",
+      "Send patient lab results via public social media groups when the hospital Wi-Fi is slow."
+    ],
+    "answer": 0,
+    "rationale": "Individual authentication and automatic/manual screen locking prevent unauthorized access and maintain audit trails for sensitive health data."
+  }
 ]
