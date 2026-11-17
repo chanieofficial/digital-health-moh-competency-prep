@@ -1,6 +1,9 @@
+import csv
+import datetime
+import io
 import json
-import random
 import pathlib
+import random
 import time
 import streamlit as st
 from content import *
@@ -28,49 +31,78 @@ st.markdown("""
 MCQ = json.loads((pathlib.Path(__file__).parent / "data" / "mcq.json").read_text(encoding="utf-8"))
 UNIT_TO_CAT = {u[1]: u[0] for u in UNITS}
 
-st.title("📘 Competency Pocket Guide")
-st.caption("Behavioral competency · Emotional intelligence · Information systems")
+# Bilingual Helper
+lang = st.radio("🌐 Language / ቋንቋ", ["English", "አማርኛ (Amharic)"], horizontal=True)
+IS_AM = lang.startswith("አማርኛ")
+
+def T(en, am):
+    return am if IS_AM else en
+
+CATS_AM = {"Work": "ስራ (Work)", "Human": "ሰው (Human)", "Result": "ውጤት (Result)"}
+
+st.title(T("📘 Competency Pocket Guide", "📘 የብቃት ምዘና መመሪያ"))
+st.caption(T(
+    "Behavioral competency · Emotional intelligence · Information systems",
+    "የባህሪ ብቃት · ስሜታዊ ብልህነት · የመረጃ አስተዳደር ስርዓቶች"
+))
 
 # Global Grade / Role Tier Selector
 tier_names = list(GRADE_TIERS.keys()) if "GRADE_TIERS" in globals() else ["All Levels (15 Units)"]
-selected_tier = st.selectbox("🎯 Your Civil Service Grade / Role", tier_names, key="grade_tier")
+selected_tier = st.selectbox(
+    T("🎯 Your Civil Service Grade / Role", "🎯 የሲቪል ሰርቪስ ደረጃ / የስራ ድርሻ"),
+    tier_names,
+    key="grade_tier",
+)
 tier_info = GRADE_TIERS.get(selected_tier, {"desc": "", "units": None}) if "GRADE_TIERS" in globals() else {"desc": "", "units": None}
 allowed_units = set(tier_info["units"]) if tier_info["units"] else {u[1] for u in UNITS}
 
 if tier_info["desc"]:
-    st.caption(f"{tier_info['desc']} ({len(allowed_units)} required units)")
+    st.caption(f"{tier_info['desc']} ({len(allowed_units)} {T('required units', 'የሚፈለጉ ምዕራፎች')})")
 
-t_home, t_comp, t_quiz, t_ei, t_ims, t_find = st.tabs(
-    ["🏠 Home", "🧩 Units", "📝 Quiz", "💗 EI", "🗄️ IMS", "🔎 Find"]
-)
+t_home, t_comp, t_quiz, t_ei, t_ims, t_find = st.tabs([
+    T("🏠 Home", "🏠 መነሻ"),
+    T("🧩 Units", "🧩 ምዕራፎች"),
+    T("📝 Quiz", "📝 ፈተና"),
+    T("💗 EI", "💗 ስሜታዊ ብልህነት"),
+    T("🗄️ IMS", "🗄️ መረጃ ስርዓት"),
+    T("🔎 Find", "🔎 ፈልግ"),
+])
 
 # ---------------- HOME
 with t_home:
-    st.subheader("Three-pillar model")
+    st.subheader(T("Three-pillar model", "የሶስት ምሰሶዎች ሞዴል"))
     for c, e in CATS.items():
         total_n = sum(1 for u in UNITS if u[0] == c)
         req_n = sum(1 for u in UNITS if u[0] == c and u[1] in allowed_units)
-        badge = f"{req_n}/{total_n} units for your tier" if req_n != total_n else f"{total_n} units"
+        unit_word = T("units", "ምዕራፎች")
+        badge = f"{req_n}/{total_n} {unit_word}" if req_n != total_n else f"{total_n} {unit_word}"
+        cat_label = CATS_AM[c] if IS_AM else c
         st.markdown(
-            f"<div class='card'><b>{e} {c}</b> <span class='pill'>{badge}</span><br>{CAT_BLURB[c]}</div>",
+            f"<div class='card'><b>{e} {cat_label}</b> <span class='pill'>{badge}</span><br>{CAT_BLURB[c]}</div>",
             unsafe_allow_html=True,
         )
-    st.subheader("Who needs how many?")
+    st.subheader(T("Who needs how many?", "ለየትኛው ደረጃ ስንት ምዕራፍ ያስፈልጋል?"))
     for k, v in LEVELS.items():
         st.markdown(f"**{k}**: {v}")
-    st.subheader("Learning domains")
+    st.subheader(T("Learning domains", "የትምህርት ዘርፎች"))
     for n, d, lv in DOMAINS:
         with st.expander(n):
             st.write(d)
             st.caption(lv)
-    with st.expander("12 technical units"):
+    with st.expander(T("12 technical units", "12 የቴክኒክ ምዕራፎች")):
         st.write(" · ".join(TECH_UNITS))
-    st.info("Behavioral assessment is case-based: it tests what you'd *do*, not what you can recite.")
+    st.info(T(
+        "Behavioral assessment is case-based: it tests what you'd *do*, not what you can recite.",
+        "የባህሪ ብቃት ምዘና በተግባራዊ ሁኔታዎች ላይ የተመሰረተ ነው፡ የሚፈትነው በተግባር ምን እንደሚያደርጉ እንጂ ቃል በቃል የሚያስታውሱትን አይደለም።"
+    ))
 
 # ---------------- UNITS
 with t_comp:
     cat = st.radio("Category", ["All", *CATS], horizontal=True, label_visibility="collapsed")
-    only_my_tier = st.toggle("Show only units required for my selected grade", value=True)
+    only_my_tier = st.toggle(
+        T("Show only units required for my selected grade", "ለተመረጠው የስራ ደረጃ የሚፈለጉ ምዕራፎችን ብቻ አሳይ"),
+        value=True,
+    )
     shown = 0
     for c, name, am, desc, ind in UNITS:
         if cat != "All" and c != cat:
@@ -78,15 +110,19 @@ with t_comp:
         if only_my_tier and name not in allowed_units:
             continue
         shown += 1
-        req_tag = " · ⭐ Required" if name in allowed_units and len(allowed_units) < len(UNITS) else ""
-        with st.expander(f"{CATS[c]} {name}{req_tag}"):
-            st.markdown(f"<div class='am'>{am}</div>", unsafe_allow_html=True)
+        req_tag = f" · ⭐ {T('Required', 'የሚፈለግ')}" if name in allowed_units and len(allowed_units) < len(UNITS) else ""
+        header_title = f"{CATS[c]} {am} ({name}){req_tag}" if IS_AM else f"{CATS[c]} {name}{req_tag}"
+        with st.expander(header_title):
+            st.markdown(f"<div class='am'>{name if IS_AM else am}</div>", unsafe_allow_html=True)
             st.write(desc)
-            st.markdown("**Indicators**")
+            st.markdown(f"**{T('Indicators', 'መለኪያ አመልካቾች')}**")
             for i in ind:
                 st.markdown(f"- {i}")
     if not shown:
-        st.info("No units match this category for your selected grade tier. Toggle off the grade filter to view all.")
+        st.info(T(
+            "No units match this category for your selected grade tier. Toggle off the grade filter to view all.",
+            "ለተመረጠው የስራ ደረጃ በዚህ ምድብ ምዕራፍ የለም። ሁሉንም ለማየት ማጣሪያውን ያጥፉ።"
+        ))
 
 # ---------------- QUIZ & TIMED MOCK EXAM
 with t_quiz:
@@ -95,8 +131,16 @@ with t_quiz:
         S.qz = None
 
     if S.qz is None:
-        mode = st.radio("Mode", ["Practice Quiz", "⏱️ Timed Mock Exam"], horizontal=True)
-        filter_by_tier = st.checkbox("Filter questions to my selected civil service grade", value=True)
+        mode = st.radio(
+            T("Mode", "የፈተና አይነት"),
+            [T("Practice Quiz", "ልምምድ"), T("⏱️ Timed Mock Exam", "⏱️ በሰዓት የተገደበ ሙከራ")],
+            horizontal=True,
+        )
+        is_timed = "Timed" in mode or "በሰዓት" in mode
+        filter_by_tier = st.checkbox(
+            T("Filter questions to my selected civil service grade", "ጥያቄዎችን በተመረጠው የስራ ደረጃ አጣራ"),
+            value=True,
+        )
 
         base_pool = [
             q for q in MCQ
@@ -106,22 +150,23 @@ with t_quiz:
             base_pool = MCQ
 
         units = sorted({q["unit"] for q in base_pool})
-        pick = st.selectbox("Topic", ["All topics", *units])
-        pool_preview = [q for q in base_pool if pick == "All topics" or q["unit"] == pick]
+        all_label = T("All topics", "ሁሉም ርዕሶች")
+        pick = st.selectbox(T("Topic", "ርዕስ"), [all_label, *units])
+        pool_preview = [q for q in base_pool if pick == all_label or q["unit"] == pick]
 
         max_q = max(1, len(pool_preview))
-        default_q = min(15 if "Timed" in mode else 8, max_q)
-        n = st.slider("Questions", 1, max_q, default_q) if max_q > 1 else 1
+        default_q = min(15 if is_timed else 8, max_q)
+        n = st.slider(T("Questions", "የጥያቄ ብዛት"), 1, max_q, default_q) if max_q > 1 else 1
 
         mins_per_q = 1.0
         total_mins = int(max(1, round(n * mins_per_q)))
-        if "Timed" in mode:
-            st.info(
-                f"⏱️ Exam Simulation: **{n} questions** in **{total_mins} minutes** (60 sec/question). "
-                "Unanswered questions auto-submit when time runs out."
-            )
+        if is_timed:
+            st.info(T(
+                f"⏱️ Exam Simulation: **{n} questions** in **{total_mins} minutes** (60 sec/question). Unanswered questions auto-submit when time runs out.",
+                f"⏱️ የፈተና ልምምድ፡ **{n} ጥያቄዎች** በ **{total_mins} ደቂቃ** ውስጥ። ሰዓቱ ሲያልቅ ፈተናው በራሱ ይጠናቀቃል።"
+            ))
 
-        if st.button("Start ▶"):
+        if st.button(T("Start ▶", "ጀምር ▶")):
             pool = list(pool_preview)
             random.shuffle(pool)
             qs = []
@@ -135,11 +180,14 @@ with t_quiz:
                 "score": 0,
                 "ans": None,
                 "log": [],
-                "timed": "Timed" in mode,
-                "deadline": time.time() + (total_mins * 60) if "Timed" in mode else None,
+                "timed": is_timed,
+                "deadline": time.time() + (total_mins * 60) if is_timed else None,
             }
             st.rerun()
-        st.caption("Tip: Add a 'rationale' field to items in data/mcq.json to display detailed explanations after each answer.")
+        st.caption(T(
+            "Tip: Add a 'rationale' field to items in data/mcq.json to display detailed explanations after each answer.",
+            "ማሳሰቢያ፡ መልሶቹ ለምርምር እና ለልምምድ የተዘጋጁ ናቸው።"
+        ))
     else:
         z = S.qz
         time_expired = False
@@ -150,25 +198,25 @@ with t_quiz:
             else:
                 mins, secs = divmod(rem, 60)
                 st.markdown(
-                    f"<div class='timer-box'>⏱️ Time Remaining: {mins:02d}:{secs:02d}</div>",
+                    f"<div class='timer-box'>⏱️ {T('Time Remaining', 'የቀረው ሰዓት')}: {mins:02d}:{secs:02d}</div>",
                     unsafe_allow_html=True,
                 )
 
         if z["i"] >= len(z["qs"]) or time_expired:
             if time_expired and z["i"] < len(z["qs"]):
-                st.warning("⏰ Time is up! Your exam has been submitted.")
+                st.warning(T("⏰ Time is up! Your exam has been submitted.", "⏰ ሰዓቱ አልቋል! ፈተናዎ ተጠናቋል።"))
                 for rem_q in z["qs"][z["i"]:]:
                     z["log"].append((rem_q["unit"], False))
                 z["i"] = len(z["qs"])
 
             total = len(z["qs"])
             pct = (z["score"] / total * 100) if total else 0
-            st.success(f"Final Score: {z['score']} / {total} ({pct:.0f}%)")
+            st.success(f"{T('Final Score', 'አጠቃላይ ውጤት')}: {z['score']} / {total} ({pct:.0f}%)")
 
             # Pillar-by-pillar breakdown
-            st.subheader("📊 Score by Competency Pillar")
-            pillar_stats = {c: [0, 0] for c in CATS}  # [correct, total]
-            other_stats = [0, 0]
+            st.subheader(T("📊 Score by Competency Pillar", "📊 ውጤት በብቃት ምሰሶዎች"))
+            pillar_stats = {c: list((0, 0)) for c in CATS}
+            other_stats = list((0, 0))
             for u, ok in z["log"]:
                 cat_name = UNIT_TO_CAT.get(u)
                 if cat_name in pillar_stats:
@@ -184,59 +232,14 @@ with t_quiz:
             for idx, (c, emoji) in enumerate(CATS.items()):
                 corr, tot = pillar_stats[c]
                 val = f"{corr}/{tot}" if tot else "—"
-                cols[idx].metric(f"{emoji} {c}", val)
+                label = CATS_AM[c] if IS_AM else c
+                cols[idx].metric(f"{emoji} {label}", val)
 
             if other_stats[1] > 0:
-                st.caption(f"Other / Technical topics: {other_stats[0]}/{other_stats[1]}")
+                st.caption(f"{T('Other / Technical topics', 'ሌሎች / ቴክኒካል ርዕሶች')}: {other_stats[0]}/{other_stats[1]}")
 
-            with st.expander("Question-by-question review", expanded=True):
+            with st.expander(T("Question-by-question review", "የጥያቄዎች ዝርዝር ግምገማ"), expanded=True):
                 for idx, (u, ok) in enumerate(z["log"], 1):
                     st.write(f"{'✅' if ok else '❌'} **Q{idx}** · {u}")
 
-            if st.button("New quiz / exam", key="qz_new"):
-                S.qz = None
-                st.rerun()
-        else:
-            q = z["qs"][z["i"]]
-            pillar_badge = (
-                f" · {CATS[UNIT_TO_CAT[q['unit']]]} {UNIT_TO_CAT[q['unit']]}"
-                if q["unit"] in UNIT_TO_CAT
-                else ""
-            )
-            st.progress(z["i"] / len(z["qs"]), text=f"Q{z['i']+1} of {len(z['qs'])} · {q['unit']}{pillar_badge}")
-            st.markdown(f"**{q['q']}**")
-            labels = [q["options"][k] for k in q["order"]]
-
-            if z["ans"] is None:
-                for pos, k in enumerate(q["order"]):
-                    if st.button(labels[pos], key=f"o{z['i']}_{pos}"):
-                        ok = k == q["answer"]
-                        z["ans"] = (pos, ok)
-                        z["score"] += int(ok)
-                        z["log"].append((q["unit"], ok))
-                        st.rerun()
-            else:
-                pos, ok = z["ans"]
-                (st.success if ok else st.error)("Correct!" if ok else "Not quite")
-                st.markdown(f"**Best answer:** {q['options'][q['answer']]}")
-                if q.get("rationale"):
-                    st.info(f"💡 **Why:** {q['rationale']}")
-                if st.button("Next ▶", key="qz_next"):
-                    z["i"] += 1
-                    z["ans"] = None
-                    st.rerun()
-
-            if st.button("Quit", key="qz_quit"):
-                S.qz = None
-                st.rerun()
-
-# ---------------- EI
-with t_ei:
-    if "ei" not in st.session_state:
-        st.session_state.ei = 0
-    i = st.session_state.ei
-    title, body = EI[i]
-    st.progress((i + 1) / len(EI), text=f"{i+1} / {len(EI)}")
-    st.markdown(f"<div class='card'><h4>{title}</h4>{body}</div>", unsafe_allow_html=True)
-    c1, c2 = st.columns(2)
-    if c1.button("◀ Back", key="ei_back", disabled=i == 0):
+            # Downloadable CSV Score Report
