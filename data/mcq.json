@@ -336,4 +336,126 @@
     "answer": 0,
     "rationale": "Individual authentication and automatic/manual screen locking prevent unauthorized access and maintain audit trails for sensitive health data."
   }
-]
+],
+  {
+    "unit": "Aptitude & Numerical Reasoning",
+    "q": "A woreda health center targets 400 antenatal care (ANC-4) visits per quarter. In Q1, it achieved 340 visits, and in Q2, it achieved 380 visits. By what percentage did performance improve from Q1 to Q2, and what was the Q2 target achievement rate?",
+    "options": [
+      "11.8% improvement from Q1 to Q2; 95.0% target achievement in Q2.",
+      "10.0% improvement from Q1 to Q2; 90.0% target achievement in Q2.",
+      "40.0% improvement from Q1 to Q2; 85.0% target achievement in Q2.",
+      "11.8% improvement from Q1 to Q2; 85.0% target achievement in Q2."
+    ],
+    "answer": 0,
+    "rationale": "Improvement = (380 - 340) / 340 = 40 / 340 ≈ 11.76% (11.8%). Target achievement = 380 / 400 = 95.0%."
+  },
+  {
+    "unit": "Aptitude & Numerical Reasoning",
+    "q": "A hospital ward has 24 nurses working across three 8-hour shifts (Morning, Afternoon, Night) in a 3:2:1 staffing ratio. How many nurses are assigned to the Morning shift?",
+    "options": [
+      "12 nurses",
+      "8 nurses",
+      "4 nurses",
+      "16 nurses"
+    ],
+    "answer": 0,
+    "rationale": "Total ratio parts = 3 + 2 + 1 = 6. Each part = 24 / 6 = 4 nurses. Morning shift = 3 × 4 = 12 nurses."
+  },
+  {
+    "unit": "Aptitude & Logical Reasoning",
+    "q": "Premise 1: All public health facilities must submit monthly DHIS2 reports by the 5th day of the following month. Premise 2: Clinic B submitted its Tikimt report on the 8th day. Which conclusion logically follows?",
+    "options": [
+      "Clinic B did not meet the mandatory monthly DHIS2 reporting deadline.",
+      "Clinic B's data is inaccurate and must be deleted.",
+      "All clinics in the woreda submitted their reports late.",
+      "Clinic B is exempt from DHIS2 reporting."
+    ],
+    "answer": 0,
+    "rationale": "Deductive logic confirms only that submitting on the 8th violates the 'by the 5th' deadline rule; it does not prove data inaccuracy or affect other clinics."
+  },
+  {
+    "unit": "Aptitude & Verbal Reasoning",
+    "q": "Read the policy statement: 'Civil service competency assessment aims not merely to audit past credentials, but to verify practical readiness to deliver equitable, citizen-centered outcomes.' What is the primary purpose emphasized?",
+    "options": [
+      "Evaluating real-world capability to serve citizens fairly and effectively.",
+      "Replacing all university degrees and professional licenses.",
+      "Reducing the total number of public health facilities.",
+      "Focusing exclusively on theoretical textbook definitions."
+    ],
+    "answer": 0,
+    "rationale": "The phrase 'practical readiness to deliver equitable, citizen-centered outcomes' highlights applied job capability over mere credential counting."
+  },
+  {
+    "unit": "Innovation / Creativity",
+    "q": "Applying the 5S Kaizen principle (Sort, Set in Order, Shine, Standardize, Sustain) in an emergency triage room, what is the very first step your team should take?",
+    "options": [
+      "Sort (Seiri): Separate essential, frequently used emergency supplies from expired, broken, or unnecessary items cluttering the workspace.",
+      "Standardize (Seiketsu): Print new wall posters before cleaning the cabinets.",
+      "Set in Order (Seiton): Buy extra storage shelves before checking what is currently in the room.",
+      "Sustain (Shitsuke): Conduct an annual audit before organizing the shelves."
+    ],
+    "answer": 0,
+    "rationale": "In 5S Kaizen, 'Sort' always comes first—removing unneeded and expired items creates space before organizing and standardizing."
+  },
+  {
+    "unit": "Citizen-Centered Service",
+    "q": "A public hospital displays a Citizen Charter at its main entrance specifying maximum waiting times for triage (15 minutes) and outpatient consultation (45 minutes). What is the primary governance purpose of this charter?",
+    "options": [
+      "To establish transparent service standards and empower citizens to hold the facility accountable.",
+      "To advertise private consultation fees to incoming patients.",
+      "To discourage patients with minor illnesses from visiting the hospital.",
+      "To exempt staff from documenting patient arrival times."
+    ],
+    "answer": 0,
+    "rationale": "Citizen Charters set clear, measurable service commitments so both staff and the public know expected standards and grievance channels."
+  },
+  {
+    "unit": "Strategic Thinking",
+    "q": "During a review of woreda health indicators, you notice institutional delivery rates are 88%, while postnatal care (PNC) within 48 hours drops to 41%. What is the most strategic intervention?",
+    "options": [
+      "Integrate structured 48-hour PNC scheduling into discharge workflows and link mothers directly with local Health Extension Workers for home follow-up.",
+      "Focus only on increasing institutional delivery rates above 95%.",
+      "Stop tracking PNC indicators until delivery rates reach 100%.",
+      "Ask mothers to return to the hospital six months after delivery."
+    ],
+    "answer": 0,
+    "rationale": "Strategic thinking uses data gaps to strengthen continuum-of-care linkages between facility discharge and community follow-up."
+  },
+  {
+    "unit": "Value for Money",
+    "q": "Two suppliers bid to provide standard examination gloves to a public health bureau. Supplier A offers certified quality meeting Ethiopian FDA standards at 420 ETB/box; Supplier B offers unverified gloves at 350 ETB/box with high tearing rates. Which choice reflects true 'Value for Money'?",
+    "options": [
+      "Selecting Supplier A, because Value for Money balances quality, safety, and durability rather than choosing the lowest upfront price.",
+      "Selecting Supplier B solely because 350 ETB is the lowest bid.",
+      "Splitting the order equally without checking quality certifications.",
+      "Canceling procurement until glove prices drop below 300 ETB."
+    ],
+    "answer": 0,
+    "rationale": "In public procurement, Value for Money optimizes economy, efficiency, and effectiveness—cheap, defective medical supplies increase waste and infection risk."
+  },
+  {
+    "unit": "Teamwork",
+    "q": "During a multidisciplinary case review, a junior nurse notices a potential medication dosage discrepancy in a treatment plan written by a senior clinician. What is the safest, most constructive team action?",
+    "options": [
+      "Speak up respectfully and promptly before administration, referencing the patient's weight/protocol to verify the dose together.",
+      "Administer the written dose without question to respect seniority.",
+      "Refuse to give the medication and leave the ward without informing anyone.",
+      "Wait until the next day's shift handover to mention the discrepancy."
+    ],
+    "answer": 0,
+    "rationale": "Psychological safety and patient-centered teamwork require speaking up respectfully across hierarchies to prevent clinical errors."
+  },
+  {
+    "unit": "Accountability",
+    "q": "Under Ethiopian civil service performance management rules, how should individual staff appraisals be conducted?",
+    "options": [
+      "Objectively against pre-agreed measurable targets, behavioral competencies, and documented evidence throughout the appraisal period.",
+      "Based solely on personal friendship or seniority without reviewing work outputs.",
+      "Only when an employee applies for a transfer to another ministry.",
+      "Without sharing the evaluation criteria or feedback with the employee."
+    ,
+    "answer": 0,
+    "rationale": "Merit-based civil service reform ties evaluations to transparent, pre-agreed KPIs and behavioral standards with constructive feedback."
+  }
+
+ 
