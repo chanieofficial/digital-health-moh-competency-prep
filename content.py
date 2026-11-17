@@ -1,92 +1,216 @@
-"""Static content pulled from the four uploaded files."""
+"""Complete static content for the Ethiopian Civil Service & MoH Competency Pocket Guide."""
 
-# ---- MoH deck + Behavioral Competency PDF: 15 behavioral units, 3 categories
-CATS = {"Work": "🛠️", "Human": "🤝", "Result": "🎯"}
-CAT_BLURB = {
- "Work": "Aligning daily work with policy, innovating, building markets, engaging stakeholders.",
- "Human": "Mindset, communication, teamwork, ethics, inclusion, empowerment.",
- "Result": "Citizen service, time, value, accountability, leadership.",
+# ---- 1. Three-Pillar Behavioral Model (15 Units: 4 Work, 6 Human, 5 Result)
+CATS = {
+    "Work": "🛠️",
+    "Human": "🤝",
+    "Result": "🎯",
 }
+
+CAT_BLURB = {
+    "Work": "Aligning daily work with policy, innovating, building markets, engaging stakeholders.",
+    "Human": "Mindset, communication, teamwork, ethics, inclusion, empowerment.",
+    "Result": "Citizen service, time, value, accountability, leadership.",
+}
+
 UNITS = [
- ("Work","Strategic Thinking","ስትራቴጂያዊ አስተሳሰብ",
-  "See the big picture, anticipate change, and tie daily work to long-term institutional and national goals.",
-  ["Connects daily tasks to long-term goals","Anticipates change & scans for risk","Plans with evidence, not guesswork","Communicates strategy to influence others"]),
- ("Work","Innovation / Creativity","ፈጠራ",
-  "Question existing ways, spot gaps, and apply new ideas in a practical, context-appropriate way.",
-  ["Identifies process inefficiencies","Proposes & tests new approaches","Open to change","Recognizes others' ideas"]),
- ("Work","Market Building","የገበያ ግንባታ",
-  "Understand and shape markets to serve public goals, with impartiality and accountability.",
-  ["Spots market opportunities & barriers","Matches supply and demand","Encourages private-sector participation","Supports productivity and growth"]),
- ("Work","Stakeholder Leadership","የባለሚና አመራር",
-  "Identify, engage and influence diverse stakeholders to deliver shared public outcomes.",
-  ["Identifies all relevant stakeholders","Analyzes interests & influence","Builds partnerships","Involves stakeholders in decisions"]),
- ("Human","Communication & Influencing","ተግባቦትና ተጽዕኖ መፍጠር",
-  "Clear, timely exchange of information, active listening, constructive feedback.",
-  ["Listens actively","Organizes ideas verbally & in writing","Gives constructive feedback","Positively influences outcomes"]),
- ("Human","Teamwork","የቡድን ሥራ",
-  "Collaborate across differences, share accountability, resolve conflict, develop colleagues.",
-  ["Collaborates across differences","Resolves conflict constructively","Supports colleagues","Shared goals over individual interest"]),
- ("Human","Emotional Intelligence","ራህሮታዊ ብስለት",
-  "Recognize, understand and manage your own emotions and those of others under pressure.",
-  ["Self-control in stress","Empathy in public interactions","Responds sensitively to feedback","Stays composed"]),
- ("Human","Ethics & Role Modeling","ሥነ-ምግባርና ተምሳሌትነት",
-  "Integrity, impartiality, transparency, and leading by example.",
-  ["Personal integrity","Follows rules, reports concerns","Promotes ethical culture","Guides teams through dilemmas"]),
- ("Human","Diversity & Inclusion","ብዝሀነትና አካታችነት",
-  "Embrace differences without discrimination; ensure equal rights and fair treatment.",
-  ["Respect in interactions","Treats all fairly","Challenges discrimination","Builds inclusive culture"]),
- ("Human","Competence & Motivation","መብቃትና መነሳሳት",
-  "Inspire and enable others: delegate, coach, recognize, build capability.",
-  ["Identifies capability gaps","Coaches & mentors","Shares knowledge","Aligns motivation with mission"]),
- ("Result","Servanthood","አገልጋይነት",
-  "Citizen-centered delivery; proactively meet needs of citizens, stakeholders and colleagues.",
-  ["Understands client needs","Timely, accurate information","Applies service standards","Resolves issues"]),
- ("Result","Time Management","የጊዜ አጠቃቀም",
-  "Prioritize, allocate resources and structure work to meet deadlines.",
-  ["High-priority work on time","Plans realistically","Avoids procrastination","Eliminates time-wasters"]),
- ("Result","Value-Adding Work","ዕሴት ጨማሪ ሥራ",
-  "Focus on high-impact activities that deliver efficient, sustainable public value.",
-  ["Uses resources efficiently","Creates client-perceived value","Quality at lower cost/time","Improves continuously"]),
- ("Result","Discharging Responsibility","ኃላፊነትን መወጣት",
-  "Ownership, reliability and accountability for duties and outcomes.",
-  ["Takes ownership of outcomes","Meets standard and timeline","Doesn't shift blame","Follows through"]),
- ("Result","Leadership","መሪነት",
-  "Clear direction, inspiration, inclusion, and role-modeling civil service values.",
-  ["Provides clear direction","Motivates through challenges","Empowers others","Leads inclusively"]),
+    # --- WORK (4 units) ---
+    (
+        "Work",
+        "Strategic Thinking",
+        "ስትራቴጂያዊ አስተሳሰብ",
+        "See the big picture, anticipate change, and tie daily clinical or public health work to long-term institutional and national goals.",
+        [
+            "Connects daily tasks to Health Sector Transformation Plan (HSTP) goals",
+            "Anticipates service bottlenecks & scans for public health risks",
+            "Plans with epidemiological evidence, not guesswork",
+            "Communicates institutional strategy to align colleagues",
+        ],
+    ),
+    (
+        "Work",
+        "Innovation / Creativity",
+        "ፈጠራ እና አዳዲስ አሰራሮች",
+        "Question existing routines, spot service gaps, and apply practical, low-cost Kaizen improvements in healthcare delivery.",
+        [
+            "Identifies workflow inefficiencies in wards, clinics, or offices",
+            "Proposes practical, context-appropriate solutions within budget",
+            "Encourages constructive feedback to refine standard operating procedures",
+            "Adapts digital tools and job aids to reduce clinical or clerical errors",
+        ],
+    ),
+    (
+        "Work",
+        "Building Markets / Resource Mobilization",
+        "ሀብት ማሰባሰብ እና ገበያ መገንባት",
+        "Identify sustainable resource opportunities, optimize public-private partnerships, and strengthen institutional capacity.",
+        [
+            "Maps local and partner resources to close facility supply or service gaps",
+            "Supports cost-recovery and sustainable health financing initiatives",
+            "Promotes institutional services clearly to build public trust and uptake",
+            "Leverages community and NGO partnerships responsibly",
+        ],
+    ),
+    (
+        "Work",
+        "Stakeholder Engagement",
+        "ባለድርሻ አካላትን ማሳተፍ",
+        "Build collaborative relationships across health bureaus, kebele leaders, Health Extension Workers, and community structures.",
+        [
+            "Consults internal and external stakeholders before rolling out changes",
+            "Coordinates multi-sector responses during outbreaks or health campaigns",
+            "Listens actively to community feedback and patient advocacy groups",
+            "Maintains transparent communication with referral facilities and partners",
+        ],
+    ),
+
+    # --- HUMAN (6 units) ---
+    (
+        "Human",
+        "Growth Mindset",
+        "የእድገት አስተሳሰብ",
+        "Embrace continuous learning, adapt positively to civil service reforms, and treat challenges as opportunities to improve.",
+        [
+            "Seeks continuous professional development (CPD) and updated clinical guidelines",
+            "Accepts constructive feedback from supervisors and peers without defensiveness",
+            "Adapts quickly to new digital health systems (e.g., DHIS2, EMR)",
+            "Helps colleagues navigate policy and organizational transitions",
+        ],
+    ),
+    (
+        "Human",
+        "Communication",
+        "ውጤታማ ተግባቦት",
+        "Deliver clear, empathetic, two-way communication with patients, caregivers, colleagues, and leadership.",
+        [
+            "Explains complex medical or administrative procedures in plain, respectful language",
+            "Uses active listening and teach-back methods to confirm understanding",
+            "Writes concise, accurate shift handovers, reports, and official memos",
+            "Adjusts communication style across diverse cultural and linguistic backgrounds",
+        ],
+    ),
+    (
+        "Human",
+        "Teamwork",
+        "የቡድን ስራ",
+        "Collaborate across multidisciplinary cadres to deliver seamless, patient-centered public service.",
+        [
+            "Shares workload fairly and supports colleagues during peak clinical volume",
+            "Respects the roles of nurses, physicians, pharmacists, lab staff, and support teams",
+            "Resolves interpersonal friction early through constructive dialogue",
+            "Contributes actively during morning huddles and quality-improvement reviews",
+        ],
+    ),
+    (
+        "Human",
+        "Ethics & Integrity",
+        "ስነ-ምግባር እና ታማኝነት",
+        "Uphold Civil Servants Proclamation No. 1353/2025, impartiality, patient confidentiality, and zero tolerance for corruption.",
+        [
+            "Treats all citizens equally regardless of personal connections or status",
+            "Protects patient privacy and confidential medical/personnel records",
+            "Refuses gifts, bribes, or undue influence and reports misconduct properly",
+            "Declares conflicts of interest transparently before making decisions",
+        ],
+    ),
+    (
+        "Human",
+        "Inclusion & Diversity",
+        "አካታችነት እና ብዝሃነትን ማክበር",
+        "Ensure equitable, barrier-free access to health and public services for women, elders, persons with disabilities, and underserved groups.",
+        [
+            "Adapts service delivery for patients with visual, hearing, or mobility impairments",
+            "Challenges bias and ensures respectful care across all backgrounds",
+            "Advocates for gender-sensitive and youth-friendly health services",
+            "Creates a psychologically safe environment where every team member is heard",
+        ],
+    ),
+    (
+        "Human",
+        "Empowerment & Emotional Intelligence",
+        "ማብቃት እና ስሜታዊ ብልህነት",
+        "Manage emotions under high clinical stress, show empathy toward distressed citizens, and mentor junior staff.",
+        [
+            "Remains calm, composed, and professional when dealing with anxious or angry patients",
+            "Recognizes personal stress triggers and practices healthy emotional regulation",
+            "Mentors newly deployed clinicians and delegates responsibilities clearly",
+            "Builds confidence in peers by recognizing strong performance",
+        ],
+    ),
+
+    # --- RESULT (5 units) ---
+    (
+        "Result",
+        "Citizen-Centered Service",
+        "ዜጋ-ተኮር አገልግሎት",
+        "Put patient dignity, safety, and timely access at the center of every public health interaction.",
+        [
+            "Greets citizens promptly and guides them clearly through triage and referral steps",
+            "Handles complaints with empathy and resolves root causes rather than shifting blame",
+            "Monitors waiting times and reduces unnecessary administrative hurdles",
+            "Upholds the Citizen Charter standards in daily service delivery",
+        ],
+    ),
+    (
+        "Result",
+        "Time Management",
+        "የጊዜ አጠቃቀም",
+        "Prioritize urgent tasks, respect working hours, and meet clinical and reporting deadlines reliably.",
+        [
+            "Arrives punctually for shifts, handovers, and scheduled outreach",
+            "Triages tasks by clinical urgency and institutional impact",
+            "Submits HMIS/DHIS2 and administrative reports on or before deadlines",
+            "Minimizes idle delays during patient transfers and supply requests",
+        ],
+    ),
+    (
+        "Result",
+        "Value for Money",
+        "ወጪ ቆጣቢነት እና ውጤታማነት",
+        "Protect public funds, prevent medication and supply wastage, and maximize health impact per birr spent.",
+        [
+            "Applies FEFO (First-Expiry, First-Out) stock rotation to prevent drug/kit expiration",
+            "Maintains medical equipment properly and reports faults early",
+            "Eliminates duplicate testing, unnecessary printing, and resource misuse",
+            "Justifies procurement requests with accurate consumption data",
+        ],
+    ),
+    (
+        "Result",
+        "Accountability",
+        "ተጠያቂነት",
+        "Take personal ownership of decisions, clinical outcomes, data accuracy, and regulatory compliance.",
+        [
+            "Documents clinical care and public records accurately without fabrication",
+            "Owns mistakes promptly, corrects errors transparently, and prevents recurrence",
+            "Follows national treatment protocols and civil service directives consistently",
+            "Holds self and team members to measurable performance standards",
+        ],
+    ),
+    (
+        "Result",
+        "Leadership",
+        "አመራርነት",
+        "Inspire shared vision, drive quality improvement, and guide teams through reform and high-pressure situations.",
+        [
+            "Sets clear expectations and models ethical civil service behavior",
+            "Makes timely, evidence-based decisions during emergencies or staffing shortages",
+            "Coaches team members and resolves inter-unit bottlenecks constructively",
+            "Champions continuous quality improvement (Kaizen) across the facility",
+        ],
+    ),
 ]
-LEVELS = {"Technician":"11 behavioral units · 7 technical","Professional":"12 behavioral units · 8 technical","Leader":"15 behavioral units · 12 technical"}
 
-TECH_UNITS = ["Strategy & Strategic Plan Preparation","Planning","Organizing Resources & Inputs","Technology Utilization",
- "Knowledge","Skill","Professional Ethics","Leading","Decision Making","Monitoring & Effective Performance","Evaluation","Feedback"]
+# ---- 2. Grade-Level / Role Tier Filtering ----
+LEVELS = {
+    "Junior / Officer (Grades VIII–XI)": "10 core operational, ethical & citizen-service units for frontline healthcare staff.",
+    "Senior / Team Leader (Grades XII–XV)": "13 units adding strategic alignment, stakeholder engagement & empowerment.",
+    "Director / Executive (Grades XVI+)": "All 15 units with full emphasis on strategy, resource mobilization & leadership.",
+}
 
-DOMAINS = [
- ("Cognitive","Knowledge, understanding, reasoning, problem-solving.","Remember → Understand → Apply → Analyze → Evaluate → Create"),
- ("Affective","Attitudes, values, emotions, motivation, professional behavior. (Behavioral competency lives here.)","Receiving → Responding → Valuing → Organizing → Characterizing"),
- ("Psychomotor","Physical skills, technical ability, use of tools.","Perception → Set → Guided Response → Mechanism → Complex Overt Response → Adaptation → Origination"),
-]
-
-# ---- Emotional Intelligence deck
-EI = [
- ("What is EI?","Ability to perceive, understand, regulate and use emotions in self and others. (Salovey & Mayer 1990; Goleman 1995)"),
- ("Core components","Self-awareness · Self-regulation · Motivation · Empathy · Social skills"),
- ("Why it matters in healthcare","Complex patient interactions · High-stress decisions · Team collaboration · Conflict management · Patient-centered care"),
- ("Evidence","Associated with better leadership, lower burnout, improved communication, higher patient satisfaction."),
- ("Clinical applications","Nursing leadership · Physician leadership · Patient counseling · Emergency care · Interprofessional teamwork"),
- ("Challenges","Work overload · Emotional fatigue · Organizational culture · Limited training"),
- ("Building EI","Coaching · Reflection · Simulation training · Mindfulness · Mentoring"),
- ("Bottom line","EI is a strategic competency for quality, safety, leadership and workforce resilience."),
-]
-
-# ---- IMS deck
-IMS_LIFECYCLE = [("Capture","Data entry & creation"),("Store","Secure warehousing"),("Process","Cleaning & validation"),
- ("Share","Collaboration"),("Analyze","Generating insights"),("Archive","Long-term retention")]
-IMS_PILLARS = [("🖥️ Hardware","Servers, computers, sensors: the physical infrastructure."),
- ("</> Software","DBMS, ERP and analytics tools that process raw data."),
- ("⚙️ Processes","Rules and workflows that govern data usage.")]
-IMS_TYPES = [("TPS","Operators","Daily receipts / records","Unit-specific"),
- ("MIS","Middle managers","Summary reports","Departmental"),
- ("DSS","Analysts / leads","What-if predictions","Tactical"),
- ("EIS/ERP","Executives","Strategic dashboards","Enterprise-wide")]
-IMS_TRENDS = [("Agentic AI","Autonomous agents handling complex information queries."),
- ("Zero Trust","Security models embedded directly in IMS data layers."),
- ("Democratization","Low-code tools so non-technical users build their own insights.")]
+GRADE_TIERS = {
+    "All Levels (15 Units)": {
+        "desc": "Full behavioral competency framework across all civil service tiers.",
+        "units": None,
+    },
+    "Junior / Officer Level (Grades VIII–XI)": {
